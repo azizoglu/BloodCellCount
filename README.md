@@ -16,7 +16,7 @@
 
 ## Usage
 
-A function called *countCell* has been created. This function takes as input parameters the image file path (ImagePath) and the cell type (ColorType =‘SingleColor' or ‘MultiColor').
+A function called *countCell* has been created. This function takes as input parameters the image file path (ImagePath) and the cell type (ColorType =‘Monochrome' or ‘Multicoloured').
 
 ## Counting monochrome cells
 
