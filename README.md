@@ -10,11 +10,11 @@
 
   <p align="center">
     This project was created for the purpose of calculating the number of monochrome and multicoloured cells. 
-     <br />
-    [See blog post](https://www.gokhanazizoglu.com/goruntu-isleme-ile-hucre-sayimi)
-    <br />
+     <br/>
+    :newspaper: <a href = "https://www.gokhanazizoglu.com/goruntu-isleme-ile-hucre-sayimi/">See blog post</a>
   </p>
 </div>
+
 
 ## Usage
 
