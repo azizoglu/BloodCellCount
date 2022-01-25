@@ -31,24 +31,29 @@ The parameters used in the improvement functions were determined empirically.
 
 ### *Fig. 1* Image enhancement processes
 
-![ImageEnhancementProcesses](https://github.com/azizoglu/BloodCellCount/images/fig1.png?raw=true)
+![ImageEnhancementProcesses](https://github.com/azizoglu/BloodCellCount/blob/main/images/fig1.png?raw=true)
 
 ### *Fig. 2* Monochrome cells counted in the test image [1]
-![MonochromeCells](https://github.com/azizoglu/BloodCellCount/images/fig2.png?raw=true)
+![MonochromeCells](https://github.com/azizoglu/BloodCellCount/blob/main/images/fig2.png?raw=true)
 
 ## The problem of separating contiguous cells
 The accurate counting of contiguous cells is a significant issue in cell counting. In the developed method, the watershed transformation was used to separate contiguous cells. An example implementation of a watershed transformation into an contiguous cell is shown in Figure 2. AAfter transformation, the image enhancement processes (filling and opening) were performed once more to prepare the image for counting. Finally, the cell count was estimated using the *region* function and the *centroid* features of the cell regions.
 
 ### *Fig. 3* An example implementation of a watershed transformation into an contiguous cell.
-![ContiguousCell](https://github.com/azizoglu/BloodCellCount/images/fig3.png?raw=true)
+![ContiguousCell](https://github.com/azizoglu/BloodCellCount/blob/main/images/fig3.png?raw=true)
 
 ## Counting multicoloured cells
 
 The processes performed on monochromatic cells will not enough to count multicoloured cells. For this reason, the color space of image has been transformed from RGB to L*a*b, HSV and YCbCr color spaces. Then, to count the cells of the desired dark purple or blue color, channels with prominent cells in the color spaces were chosen and threshold values were determined for each color space. This threshold value makes sure that only the cells that need to be counted remain in the black and white image. Finally, the cells recognized in the black and white image derived from the three color spaces were identified and separated from the remaining cells. After this stage, improvement and counting processes were performed similar to the processes applied in monochrome cells.
 
-### *Fig. 4* Multicoloured cells counted in the test image [1]
+### *Fig. 4* Multicoloured cells counted in the test image [2]
 
-![MulticolouredCells](https://github.com/azizoglu/BloodCellCount/images/fig4.png?raw=true)
+![MulticolouredCells](https://github.com/azizoglu/BloodCellCount/blob/main/images/fig4.png?raw=true)
+
+## Test Images
+1. Monochrome cells test image: https://www.microscopyu.com/assets/gallery-images/pathology_hemolyticanemia20x04.jpg 
+2. Multicoloured cells test image: https://www.microscopyu.com/assets/gallery-images/pathology_aml20x03.jpg
+
 
 ## License
 
